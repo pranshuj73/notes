@@ -1,0 +1,43 @@
+---
+title: Notes.
+description: Get started building your docs site with Starlight.
+hero:
+  tagline: FSN is a collection of notes on full-stack development, programming, and tech in general.
+  image:
+    file: ../../assets/bongo-cat.webp
+---
+
+import { Card, LinkCard, CardGrid } from '@astrojs/starlight/components';
+
+
+## Topics
+
+<CardGrid stagger>
+	<Card title="Frontend" icon="seti:react">
+		Covers everything from HTML, CSS, and JavaScript to React and other frontend frameworks.
+	</Card>
+	<Card title="Backend" icon="node">
+		Explore backend technologies like Node.js, Express, and databases.
+	</Card>
+	<Card title="Devops" icon="seti:docker">
+		Learn about DevOps tools like Docker, Kubernetes, and CI/CD pipelines.
+	</Card>
+</CardGrid>
+
+{/* you can contribute to these notes on github */}
+## Contributing
+
+If you have any notes you'd like to add, feel free to contribute on GitHub
+
+<LinkCard
+	title="pranshuj73/fsn"
+	description="Add to this collection of notes by making a PR on GitHub"
+	href="https://github.com/pranshuj73/fsn"
+/>
+
+## Credits
+
+This site was built using [Starlight](https://starlight.astro.build/) and [Astro](https://astro.build/). The source code is available on [GitHub](https://github.com/pranshuj73/fsn).
+
+The theme for this site is based on [Ion Theme](https://louisescher.github.io/starlight-ion-theme/) by [Louis Escher](https://louisescher.dev/).
+
