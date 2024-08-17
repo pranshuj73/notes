@@ -8,7 +8,7 @@ export default defineConfig({
   integrations: [starlight({
     title: 'Notes',
     social: {
-      github: 'https://github.com/pranshuj73/fsn'
+      github: 'https://github.com/pranshuj73/notes'
     },
     sidebar: [
 			{
@@ -16,15 +16,15 @@ export default defineConfig({
 				link: '/'
 			},
 			{
-				label: '[box] Frontend',
+				label: '[frontend] Frontend',
 				autogenerate: { directory: 'frontend', collapsed: true }
 			},
 			{
-				label: 'Backend',
+				label: '[backend] Backend',
 				autogenerate: { directory: 'backend', collapsed: true }
 			},
 			{
-				label: 'Devops',
+				label: '[devops] Devops',
 				autogenerate: { directory: 'devops', collapsed: true }
 			}
 		],
