@@ -56,7 +56,7 @@ const { sublist, nested, nestedCount } = Astro.props;
 								</div>
 								<Icon name="right-caret" class="caret" size="1.25rem" />
 							</summary>
-							<Astro.self sublist={entry.entries} nested nestedCount={nestedCount} />
+							<Astro.self sublist={entry.entries} nested nestedCount={nestedCount + 1} />
 						</details>
 					)}
 				</li>

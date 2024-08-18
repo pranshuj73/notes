@@ -28,6 +28,10 @@ export default defineConfig({
 				autogenerate: { directory: 'devops', collapsed: true }
 			}
 		],
+		tableOfContents: {
+			minHeadingLevel: 2,
+			maxHeadingLevel: 4,
+		},
 		components: {
       ThemeProvider: './src/components/ThemeProvider.astro',
       ThemeSelect: './src/components/ThemeSelect.astro',
@@ -48,7 +52,6 @@ export default defineConfig({
     },
 		pagination: false,
     lastUpdated: true,
-
   }),
 	tailwind({
 		// Disable the default base styles:

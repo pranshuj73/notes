@@ -8,7 +8,7 @@ import SidebarSublist from './SidebarSublist.astro';
 const { sidebar } = Astro.props;
 ---
 
-<SidebarSublist sublist={sidebar as any} nestedCount={1} />
+<SidebarSublist sublist={sidebar as any} nestedCount={0} />
 <div class="md:sl-hidden">
 	<MobileMenuFooter {...Astro.props} />
 </div>
