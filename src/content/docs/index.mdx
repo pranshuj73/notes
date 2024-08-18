@@ -7,19 +7,19 @@ hero:
     file: ../../assets/bongo-cat.webp
 ---
 
-import { Card, LinkCard, CardGrid } from '@astrojs/starlight/components';
-
+import { LinkCard, CardGrid } from '@astrojs/starlight/components';
+import Card from '../../components/CustomCard.astro';
 
 ## Topics
 
 <CardGrid stagger>
-	<Card title="Frontend" icon="seti:react">
+	<Card title="Frontend" icon="frontend">
 		Covers everything from HTML, CSS, and JavaScript to React and other frontend frameworks.
 	</Card>
-	<Card title="Backend" icon="node">
+	<Card title="Backend" icon="backend">
 		Explore backend technologies like Node.js, Express, and databases.
 	</Card>
-	<Card title="Devops" icon="seti:docker">
+	<Card title="Devops" icon="devops">
 		Learn about DevOps tools like Docker, Kubernetes, and CI/CD pipelines.
 	</Card>
 </CardGrid>
