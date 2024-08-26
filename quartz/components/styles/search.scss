@@ -2,13 +2,13 @@
 
 .search {
   min-width: fit-content;
-  max-width: 14rem;
+  max-width: 20rem;
   flex-grow: 0.3;
 
   & > .search-button {
     background-color: var(--lightgray);
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     font-family: inherit;
     font-size: inherit;
     height: 2rem;

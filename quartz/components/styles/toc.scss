@@ -53,11 +53,13 @@ button#toc {
     & > li > a {
       color: var(--dark);
       opacity: 0.35;
+      // font-size: 0.75rem;
+      font-weight: 400;
       transition:
         0.5s ease opacity,
         0.3s ease color;
-      &.in-view {
-        opacity: 0.75;
+      &.in-view, &:hover, &:active {
+        opacity: 1;
       }
     }
   }

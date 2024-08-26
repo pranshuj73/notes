@@ -365,10 +365,11 @@ figure[data-rehype-pretty-code-figure] {
 pre {
   font-family: var(--codeFont);
   padding: 0 0.5rem;
-  border-radius: 5px;
+  border-radius: 12px;
   overflow-x: auto;
   border: 1px solid var(--lightgray);
   position: relative;
+  background: #ffffff07;
 
   &:has(> code.mermaid) {
     border: none;
@@ -424,7 +425,7 @@ code {
   font-size: 0.9em;
   color: var(--dark);
   font-family: var(--codeFont);
-  border-radius: 5px;
+  border-radius: 12px;
   padding: 0.1rem 0.2rem;
   background: var(--lightgray);
 }

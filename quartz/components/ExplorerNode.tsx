@@ -1,4 +1,5 @@
 // @ts-ignore
+import { JSX } from "preact/jsx-runtime"
 import { QuartzPluginData } from "../plugins/vfile"
 import {
   joinSegments,
@@ -133,7 +134,7 @@ export class FileNode {
       if (!node.file) {
         const folderPath = joinSegments(currentPath, node.name)
         if (folderPath !== "") {
-          folderPaths.push({ path: folderPath, collapsed })
+          folderPaths.push({ path: folderPath, collapsed: node.depth !== 1 ? collapsed : false })
         }
 
         node.children.forEach((child) => traverse(child, folderPath))
@@ -171,6 +172,13 @@ export function ExplorerNode({ node, opts, fullPath, fileData }: ExplorerNodePro
   const folderPath = node.name !== "" ? joinSegments(fullPath ?? "", node.name) : ""
   const href = resolveRelative(fileData.slug!, folderPath as SimpleSlug) + "/"
 
+  const specialFolderIcons: { [key: string]: JSX.Element } = {
+    "dsa": <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-network"><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"/><path d="M12 12V8"/></svg>,
+    "frontend": <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-monitor-smartphone"><path d="M18 8V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h8"/><path d="M10 19v-3.96 3.15"/><path d="M7 19h5"/><rect width="6" height="10" x="16" y="12" rx="2"/></svg>,
+    "backend": <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-server"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg>,
+    "devops": <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-workflow"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></svg>,
+  }
+
   return (
     <>
       {node.file ? (
@@ -186,20 +194,6 @@ export function ExplorerNode({ node, opts, fullPath, fileData }: ExplorerNodePro
             // Node with entire folder
             // Render svg button + folder name, then children
             <div class="folder-container">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="12"
-                height="12"
-                viewBox="5 8 14 8"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="folder-icon"
-              >
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
               {/* render <a> tag if folderBehavior is "link", otherwise render <button> with collapse click event */}
               <div key={node.name} data-folderpath={folderPath}>
                 {folderBehavior === "link" ? (
@@ -208,7 +202,21 @@ export function ExplorerNode({ node, opts, fullPath, fileData }: ExplorerNodePro
                   </a>
                 ) : (
                   <button class="folder-button">
-                    <span class="folder-title">{node.displayName}</span>
+                    <span class="folder-title">{specialFolderIcons[node.displayName.toLowerCase()]} {node.displayName}</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      viewBox="5 8 14 8"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="folder-icon"
+                      >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
                   </button>
                 )}
               </div>
