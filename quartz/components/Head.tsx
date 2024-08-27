@@ -11,7 +11,7 @@ export default (() => {
       fileData.description?.trim() ?? i18n(cfg.locale).propertyDefaults.description
     const { css, js } = externalResources
 
-    const url = new URL(`https://${cfg.baseUrl ?? "example.com"}`)
+    const url = new URL(`https://${cfg.baseUrl ?? "notes.pranshujha.com"}`)
     const path = url.pathname as FullSlug
     const baseDir = fileData.slug === "404" ? path : pathToRoot(fileData.slug!)
 
@@ -22,6 +22,7 @@ export default (() => {
       <head>
         <title>{title}</title>
         <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         {cfg.theme.cdnCaching && cfg.theme.fontOrigin === "googleFonts" && (
           <>
             <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -29,15 +30,25 @@ export default (() => {
             <link rel="stylesheet" href={googleFontHref(cfg.theme)} />
           </>
         )}
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="title" content={title} />
+        <meta name="description" content={description} />
+        <meta name="generator" content="Quartz" />
+        <link rel="icon" href={iconPath} />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://notes.pranshujha.com/" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         {cfg.baseUrl && <meta property="og:image" content={ogImagePath} />}
         <meta property="og:width" content="1200" />
         <meta property="og:height" content="675" />
-        <link rel="icon" href={iconPath} />
-        <meta name="description" content={description} />
-        <meta name="generator" content="Quartz" />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://notes.pranshujha.com" />
+        <meta property="twitter:title" content={title} />
+        <meta property="twitter:description" content={description} />
+        {cfg.baseUrl && <meta property="twitter:image" content={ogImagePath} />}
+
         {css.map((href) => (
           <link key={href} href={href} rel="stylesheet" type="text/css" spa-preserve />
         ))}
