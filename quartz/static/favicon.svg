@@ -1,0 +1,9 @@
+<svg width="462" height="483" viewBox="0 0 462 483" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M168.153 426.047L100.812 249.66M100.812 249.66L45.0067 103.487L305.729 20L227.371 107.82M100.812 249.66L227.371 107.82M100.812 249.66L24.9366 334.697M227.371 107.82L348.27 369.74M348.27 369.74L348.544 370.335L442 126.472L348.27 369.74ZM348.27 369.74L312.337 463L20 391.568L46.938 373.243" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+<style>
+  path { stroke: #000; }
+  @media (prefers-color-scheme: dark) {
+    path { stroke: #FFF; }
+  }
+</style>
+</svg>
