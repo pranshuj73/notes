@@ -17,9 +17,9 @@ configuration:
     fontOrigin: googleFonts
     cdnCaching: true
     typography:
-      title: Doto
+      title: Geist
       header: Doto
-      body: Geist
+      body: Inter
       code: Fira Mono
     colors:
       lightMode:
@@ -111,7 +111,7 @@ plugins:
     enabled: false
     order: 92
   - source: github:quartz-community/fonts
-    enabled: true
+    enabled: false
   - source: github:quartz-community/remove-draft
     enabled: true
   - source: github:quartz-community/explicit-publish
