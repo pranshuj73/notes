@@ -17,7 +17,6 @@ configuration:
     fontOrigin: googleFonts
     cdnCaching: true
     typography:
-      title: Geist
       header: Doto
       body: Inter
       code: Fira Mono
