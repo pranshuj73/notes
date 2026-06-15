@@ -1,5 +1,6 @@
 ---
 title: zettelkasten
+index:
 ---
 hey! i'm [pranshu](https://prnsh.site), you can find me on twitter [@prnshtwt](https://x.com/prnshtwt)
 
