@@ -1,5 +1,6 @@
 ---
-index: ""
+index:
+  - "[[index-gen-ai]]"
 title: ""
 ---
 Large language models, commonly known as LLMs, are a sophisticated type of neural network. These models are characterized by their large number of [[large-language-model-parameters|parameters]], often in billions, that make them proficient at processing, understanding, and generating text. The primary goal of LLMs is to predict the next word based on previous words. As we’ve seen since GPT-3, predicting words accurately also means interpreting and creating human-like text that captures the nuances of natural language, including syntax (the arrangement of words) and semantics (the meaning of words). They are trained on extensive textual data, enabling them to grasp various language patterns and structures.

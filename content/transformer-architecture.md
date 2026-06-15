@@ -2,7 +2,8 @@
 id: transformer-architecture
 aliases: []
 tags: []
-index: "[[index-data-modeling]]"
+index:
+  - "[[index-gen-ai]]"
 ---
 The foundation of a language model that makes it powerful lies in its architecture. Recurrent Neural Networks (RNNs) were traditionally used for text processing due to their ability to process sequential data. They maintain an internal state that retains information from previous words, facilitating sequential understanding. However, RNNs encounter challenges with long sequences where they forget older information in favor of recently processed input. This is primarily caused by the [[vanishing-gradient-problem]].
 
