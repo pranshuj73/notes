@@ -39,5 +39,3 @@ Some modern NoSQL databases are adding transaction support with ACID-like proper
 ## Conclusion
 - **Traditional NoSQL databases** (e.g., Cassandra, CouchDB, etc.) usually do not offer full ACID compliance due to the trade-off between consistency and availability/scalability.
 - **Some newer NoSQL systems** (like MongoDB or Couchbase) have started to provide more ACID-like guarantees, especially in single-document or specific transactional scenarios.
-
-NoSQL systems are generally designed with flexibility and scalability in mind, and while they can support atomic operations and durability in some cases, they tend to prioritize performance and availability over strict ACID compliance.
