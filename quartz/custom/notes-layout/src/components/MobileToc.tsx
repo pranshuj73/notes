@@ -66,6 +66,26 @@ const script = `
         window.addCleanup(function () { cleanupHandlers.forEach(function (fn) { fn(); }); });
       }
     }
+
+    // scroll-spy: highlight headings currently in view
+    if (window.__notesTocObserver) window.__notesTocObserver.disconnect();
+    var observer = new IntersectionObserver(function (entries) {
+      for (var e = 0; e < entries.length; e++) {
+        var entry = entries[e];
+        var slug = entry.target.id;
+        var links = document.querySelectorAll('a[data-for="' + slug + '"]');
+        var windowHeight = entry.rootBounds ? entry.rootBounds.height : null;
+        if (!windowHeight || !links.length) continue;
+        if (entry.boundingClientRect.y < windowHeight) {
+          for (var k = 0; k < links.length; k++) links[k].classList.add("in-view");
+        } else {
+          for (var k = 0; k < links.length; k++) links[k].classList.remove("in-view");
+        }
+      }
+    });
+    window.__notesTocObserver = observer;
+    var headers = document.querySelectorAll("h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]");
+    headers.forEach(function (h) { observer.observe(h); });
   }
 
   document.addEventListener("nav", handleNavOrRender);
@@ -138,7 +158,9 @@ const MobileToc: QuartzComponent = ({ fileData }: QuartzComponentProps) => {
         <ul class="overflow notes-toc-ul">
           {toc.map((entry) => (
             <li class={`depth-${entry.depth}`}>
-              <a href={`#${entry.slug}`}>{entry.text}</a>
+              <a href={`#${entry.slug}`} data-for={entry.slug}>
+                {entry.text}
+              </a>
             </li>
           ))}
           <li class="overflow-end" />

@@ -81,9 +81,13 @@
 }
 .notes-toc-explorer button.mobile-toc-explorer h2,
 .notes-toc-explorer button.desktop-toc-explorer h2 {
-  font-size: 1rem;
+  font-size: 0.85rem;
   display: inline-block;
   margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--gray);
+  font-weight: 600;
 }
 
 .notes-toc-content {
@@ -93,9 +97,10 @@
   margin-top: 0.5rem;
 }
 .notes-toc-content ul {
-  list-style: disc;
-  margin: 0;
-  padding-left: 1.25rem;
+  list-style: none;
+  position: relative;
+  margin: 0.5rem 0;
+  padding: 0;
 }
 .notes-toc-content ul.notes-toc-ul {
   overscroll-behavior: contain;
@@ -103,9 +108,25 @@
 .notes-toc-content ul li {
   margin: 0.25rem 0;
 }
-.notes-toc-content ul li.overflow-end {
-  list-style: none;
+.notes-toc-content ul > li > a {
+  color: var(--dark);
+  opacity: 0.35;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition:
+    0.5s ease opacity,
+    0.3s ease color;
 }
+.notes-toc-content ul > li > a.in-view {
+  opacity: 0.75;
+}
+.notes-toc-content ul .depth-0 { padding-left: 0; }
+.notes-toc-content ul .depth-1 { padding-left: 1rem; }
+.notes-toc-content ul .depth-2 { padding-left: 2rem; }
+.notes-toc-content ul .depth-3 { padding-left: 3rem; }
+.notes-toc-content ul .depth-4 { padding-left: 4rem; }
+.notes-toc-content ul .depth-5 { padding-left: 5rem; }
+.notes-toc-content ul .depth-6 { padding-left: 6rem; }
 
 .notes-toc-overlay-heading {
   display: none;
@@ -131,19 +152,6 @@
 .notes-toc-content ul li > a:hover {
   opacity: 1;
   color: var(--tertiary);
-}
-.notes-toc-content ul li > a.active {
-  opacity: 1;
-  color: var(--tertiary);
-}
-.notes-toc-content ul li.depth-1 {
-  padding-left: 1rem;
-}
-.notes-toc-content ul li.depth-2 {
-  padding-left: 2rem;
-}
-.notes-toc-content ul li.depth-3 {
-  padding-left: 3rem;
 }
 
 @media all and (max-width: 800px) {
