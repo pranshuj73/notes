@@ -1,0 +1,56 @@
+{
+  "name": "notes-layout",
+  "version": "0.1.0",
+  "description": "Custom layout components for prnsh's notes",
+  "type": "module",
+  "private": true,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./components": {
+      "types": "./dist/components/index.d.ts",
+      "import": "./dist/components/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.0"
+  },
+  "quartz": {
+    "name": "notes-layout",
+    "displayName": "Notes Layout",
+    "description": "Custom TOC + Backlinks for prnsh's notes",
+    "version": "0.1.0",
+    "quartzVersion": ">=5.0.0",
+    "category": ["transformer", "component"],
+    "dependencies": [],
+    "defaultOrder": 50,
+    "defaultEnabled": true,
+    "defaultOptions": {
+      "maxDepth": 3,
+      "minEntries": 1,
+      "showByDefault": true,
+      "collapseByDefault": false
+    },
+    "components": {
+      "MobileToc": {
+        "displayName": "Mobile TOC",
+        "defaultPosition": "left",
+        "defaultPriority": 8
+      },
+      "Backlinks": {
+        "displayName": "Backlinks",
+        "defaultPosition": "right",
+        "defaultPriority": 50
+      }
+    }
+  }
+}
