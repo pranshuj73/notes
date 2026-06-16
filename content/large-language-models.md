@@ -1,4 +1,5 @@
 ---
+aliases: []
 index:
   - "[[index-gen-ai]]"
 title: ""
@@ -9,4 +10,8 @@ The core training objective of LLMs focuses on predicting the next word in a sen
 
 The text generation process in LLMs is autoregressive, meaning they generate the next word based on the sequence of words already generated. The [[attention-mechanism|attention mechanism]] is a vital component in this process; it establishes word relations and ensures the text is coherent and contextually appropriate.
 
-LLMs are limited by their [[context-window]].
+---
+
+related:
+- [[context-window]]
+- [[embedding]]

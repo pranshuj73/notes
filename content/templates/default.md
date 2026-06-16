@@ -2,4 +2,10 @@
 title:
 index:
 ---
-# 
+# {{title}}
+
+
+---
+
+related:
+- 
