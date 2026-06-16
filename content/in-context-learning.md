@@ -28,5 +28,5 @@ In-context learning is one of the defining capabilities of modern large language
 ---
 
 related:
--
+- [[large-language-models]]
 
