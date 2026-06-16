@@ -1,6 +1,4 @@
 ---
-aliases:
-  - Byte-Pair Encoding
 index: ""
 title: Byte-Pair Encoding
 ---

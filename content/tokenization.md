@@ -1,6 +1,4 @@
 ---
-aliases:
-  - tokenization
 index: ""
 title: tokenization
 ---

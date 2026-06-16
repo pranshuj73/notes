@@ -1,6 +1,4 @@
 ---
-aliases:
-  - embedding
 index: ""
 title: embedding
 ---

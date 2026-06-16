@@ -1,5 +1,4 @@
 ---
-aliases: []
 index:
   - "[[index-gen-ai]]"
 title: ""

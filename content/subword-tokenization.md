@@ -1,6 +1,4 @@
 ---
-aliases:
-  - subword tokenization
 index: ""
 title: subword tokenization
 ---

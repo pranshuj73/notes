@@ -1,6 +1,4 @@
 ---
-aliases:
-  - token
 index: ""
 title: token
 ---
