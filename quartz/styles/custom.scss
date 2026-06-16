@@ -1,3 +1,46 @@
 @use "./variables.scss" as *;
 
-// put your custom CSS here!
+.page-title {
+  margin-bottom: 8px;
+}
+
+// left sidebar: drop Doto, use body font
+.sidebar.left {
+  .page-title,
+  .page-title a,
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--bodyFont);
+    letter-spacing: normal;
+  }
+
+  .page-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  .explorer > h2,
+  .explorer button#explorer {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  ul.overflow,
+  .explorer ul,
+  .explorer li > a {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+}
+
+// right sidebar: same treatment for Graph View / Backlinks headers
+.sidebar.right {
+  h2, h3 {
+    font-family: var(--bodyFont);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}
