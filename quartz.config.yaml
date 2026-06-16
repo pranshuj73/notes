@@ -79,11 +79,15 @@ plugins:
     enabled: true
     order: 40
   - source: github:quartz-community/table-of-contents
+    enabled: false
+  - source:
+      repo: ./quartz/custom/notes-layout
+      name: MobileToc
     enabled: true
     order: 50
     layout:
-      position: right
-      priority: 30
+      position: left
+      priority: 8
   - source: github:quartz-community/crawl-links
     enabled: true
     options:
@@ -154,7 +158,7 @@ plugins:
   - source: github:quartz-community/tag-page
     enabled: true
   - source: github:quartz-community/explorer
-    enabled: true
+    enabled: false
     layout:
       position: left
       priority: 50
@@ -169,10 +173,23 @@ plugins:
       position: left
       priority: 20
   - source: github:quartz-community/backlinks
+    enabled: false
+  - source:
+      repo: ./quartz/custom/notes-layout
+      name: Backlinks
+    enabled: true
+    layout:
+      position: right
+      priority: 50
+      condition: not-index-page
+  - source:
+      repo: ./quartz/custom/notes-layout
+      name: Backlinks
     enabled: true
     layout:
       position: afterBody
       priority: 50
+      condition: is-index-page
   - source: github:quartz-community/article-title
     enabled: true
     layout:
@@ -279,7 +296,7 @@ layout:
     toolbar:
       priority: 5
       direction: row
-      gap: 0.4rem
+      gap: 0.5rem
   byPageType:
     "404":
       positions:

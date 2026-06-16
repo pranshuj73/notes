@@ -13,6 +13,8 @@
   },
   "scripts": {
     "quartz": "./quartz/bootstrap-cli.mjs",
+    "build:plugins": "cd quartz/custom/notes-layout && npm run build",
+    "dev": "npm run build:plugins && npx quartz build --serve --port 3000",
     "docs": "npx quartz build --serve -d docs",
     "check": "tsc --noEmit && npx prettier . --check",
     "format": "npx prettier . --write",

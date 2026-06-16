@@ -64,6 +64,13 @@ h1.article-title {
   letter-spacing: normal;
 }
 
+// hide the separator before backlinks on index.md / index-*.md
+body[data-slug="index"] .center > hr,
+body[data-slug^="index-"] .center > hr {
+  display: none;
+}
+
+
 // mobile: keep everything inline, shrink title, push search to the right
 @media all and #{$mobile} {
   .page-title {
@@ -97,4 +104,5 @@ h1.article-title {
     padding: 0 !important;
     order: 99 !important;
   }
+
 }
