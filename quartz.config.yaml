@@ -78,10 +78,10 @@ plugins:
   - source: github:quartz-community/github-flavored-markdown
     enabled: true
     order: 40
-  - source: github:quartz-community/table-of-contents
-    enabled: false
+  # - source: github:quartz-community/table-of-contents
+  #   enabled: false
   - source:
-      repo: ./quartz/custom/notes-layout
+      repo: github:pranshuj73/quartz-minimal-notes
       name: MobileToc
     enabled: true
     order: 50
@@ -101,24 +101,24 @@ plugins:
     options:
       renderEngine: katex
     order: 80
-  - source: github:quartz-community/citations
-    enabled: false
-    order: 85
+  # - source: github:quartz-community/citations
+  #   enabled: false
+  #   order: 85
   - source: github:quartz-community/hard-line-breaks
     enabled: true
     order: 90
-  - source: github:quartz-community/ox-hugo
-    enabled: false
-    order: 91
-  - source: github:quartz-community/roam
-    enabled: false
-    order: 92
-  - source: github:quartz-community/fonts
-    enabled: false
+  # - source: github:quartz-community/ox-hugo
+  #   enabled: false
+  #   order: 91
+  # - source: github:quartz-community/roam
+  #   enabled: false
+  #   order: 92
+  # - source: github:quartz-community/fonts
+  #   enabled: false
   - source: github:quartz-community/remove-draft
     enabled: true
-  - source: github:quartz-community/explicit-publish
-    enabled: false
+  # - source: github:quartz-community/explicit-publish
+  #   enabled: false
   - source: github:quartz-community/unlisted-pages
     enabled: true
     options: {}
@@ -130,12 +130,12 @@ plugins:
       passwordField: password
       unlistWhenEncrypted: false
       outputPath: static/encryptedContentIndex.json
-  - source: github:quartz-community/stacked-pages
-    enabled: false
-    layout:
-      position: afterBody
-      priority: 50
-      display: all
+  # - source: github:quartz-community/stacked-pages
+  #   enabled: false
+  #   layout:
+  #     position: afterBody
+  #     priority: 50
+  #     display: all
   - source: github:quartz-community/alias-redirects
     enabled: true
   - source: github:quartz-community/content-index
@@ -157,11 +157,11 @@ plugins:
     enabled: true
   - source: github:quartz-community/tag-page
     enabled: true
-  - source: github:quartz-community/explorer
-    enabled: false
-    layout:
-      position: left
-      priority: 50
+  # - source: github:quartz-community/explorer
+  #   enabled: false
+  #   layout:
+  #     position: left
+  #     priority: 50
   - source: github:quartz-community/graph
     enabled: true
     layout:
@@ -172,10 +172,10 @@ plugins:
     layout:
       position: left
       priority: 20
-  - source: github:quartz-community/backlinks
-    enabled: false
+  # - source: github:quartz-community/backlinks
+  #   enabled: false
   - source:
-      repo: ./quartz/custom/notes-layout
+      repo: github:pranshuj73/quartz-minimal-notes
       name: Backlinks
     enabled: true
     layout:
@@ -183,8 +183,8 @@ plugins:
       priority: 50
       condition: not-index-page
   - source:
-      repo: ./quartz/custom/notes-layout
-      name: Backlinks
+      repo: github:pranshuj73/quartz-minimal-notes
+      name: BacklinksBody
     enabled: true
     layout:
       position: afterBody
@@ -200,11 +200,11 @@ plugins:
     layout:
       position: beforeBody
       priority: 20
-  - source: github:quartz-community/tag-list
-    enabled: false
-    layout:
-      position: beforeBody
-      priority: 30
+  # - source: github:quartz-community/tag-list
+  #   enabled: false
+  #   layout:
+  #     position: beforeBody
+  #     priority: 30
   - source: github:quartz-community/page-title
     enabled: true
     layout:
@@ -222,31 +222,31 @@ plugins:
       group: toolbar
       groupOptions:
         align: center
-  - source: github:quartz-community/reader-mode
-    enabled: false
-    layout:
-      position: left
-      priority: 35
-      group: toolbar
-  - source: github:quartz-community/breadcrumbs
-    enabled: false
-    layout:
-      position: beforeBody
-      priority: 5
-      condition: not-index
-      group: toolbar
-      groupOptions:
-        grow: true
-  - source: github:quartz-community/comments
-    enabled: false
-    options:
-      provider: giscus
-      options: {}
-    layout:
-      position: afterBody
-      priority: 10
-  - source: github:quartz-community/recent-notes
-    enabled: false
+  # - source: github:quartz-community/reader-mode
+  #   enabled: false
+  #   layout:
+  #     position: left
+  #     priority: 35
+  #     group: toolbar
+  # - source: github:quartz-community/breadcrumbs
+  #   enabled: false
+  #   layout:
+  #     position: beforeBody
+  #     priority: 5
+  #     condition: not-index
+  #     group: toolbar
+  #     groupOptions:
+  #       grow: true
+  # - source: github:quartz-community/comments
+  #   enabled: false
+  #   options:
+  #     provider: giscus
+  #     options: {}
+  #   layout:
+  #     position: afterBody
+  #     priority: 10
+  # - source: github:quartz-community/recent-notes
+  #   enabled: false
   - source: github:quartz-community/spacer
     enabled: true
     options: {}
@@ -277,13 +277,13 @@ plugins:
       position: beforeBody
       priority: 15
       display: all
-  - source:
-      name: quartz-themes
-      repo: github:saberzero1/quartz-themes
-      subdir: plugin
-    enabled: false
-    options:
-      theme: midnight
+  # - source:
+  #     name: quartz-themes
+  #     repo: github:saberzero1/quartz-themes
+  #     subdir: plugin
+  #   enabled: false
+  #   options:
+  #     theme: midnight
   - source: github:quartz-community/obsidian-plugin-excalidraw
     enabled: true
     options:
