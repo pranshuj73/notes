@@ -118,7 +118,8 @@
     0.3s ease color;
 }
 .notes-toc-content ul > li > a.in-view {
-  opacity: 0.75;
+  opacity: 1;
+  color: var(--tertiary);
 }
 .notes-toc-content ul .depth-0 { padding-left: 0; }
 .notes-toc-content ul .depth-1 { padding-left: 1rem; }
@@ -144,14 +145,15 @@
 }
 .notes-toc-content ul li > a {
   color: var(--dark);
-  opacity: 0.75;
+  opacity: 0.5;
   pointer-events: all;
   text-decoration: none;
   font-size: 0.9rem;
 }
+
 .notes-toc-content ul li > a:hover {
   opacity: 1;
-  color: var(--tertiary);
+  color: var(--dark);
 }
 
 @media all and (max-width: 800px) {
@@ -177,7 +179,7 @@
     max-width: 100vw;
     width: 100vw;
     overflow: hidden;
-    padding: 4rem 1rem 2rem 1rem;
+    padding: 4rem 0rem;
     height: 100dvh;
     max-height: 100dvh;
   }

@@ -74,15 +74,14 @@ const script = `
         var entry = entries[e];
         var slug = entry.target.id;
         var links = document.querySelectorAll('a[data-for="' + slug + '"]');
-        var windowHeight = entry.rootBounds ? entry.rootBounds.height : null;
-        if (!windowHeight || !links.length) continue;
-        if (entry.boundingClientRect.y < windowHeight) {
+        if (!links.length) continue;
+        if (entry.isIntersecting) {
           for (var k = 0; k < links.length; k++) links[k].classList.add("in-view");
         } else {
           for (var k = 0; k < links.length; k++) links[k].classList.remove("in-view");
         }
       }
-    });
+    }, { rootMargin: "20px 0px 0px 0px" });
     window.__notesTocObserver = observer;
     var headers = document.querySelectorAll("h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]");
     headers.forEach(function (h) { observer.observe(h); });
