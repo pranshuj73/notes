@@ -1,21 +1,14 @@
 @use "./variables.scss" as *;
 
-.flex-component > div:has(> .darkmode) {
-  // width: 1rem !important;
-  // height: 1rem !important;
-  display: flex;
-  align-items: center;
-}
-
 .darkmode {
   width: 1rem !important;
   height: 1rem !important;
-  // margin-top: 3px !important;
 }
 
 .darkmode > svg {
   width: auto;
   height: 0.8rem;
+  top: calc(50% - 0.4rem);
 }
 
 // left sidebar: drop Doto, use body font
