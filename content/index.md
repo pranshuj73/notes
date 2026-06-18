@@ -4,7 +4,7 @@ title: zettelkasten
 ---
 # hey! i'm [pranshu](https://prnsh.site)
 
-you can find me on twitter [@prnshtwt](https://x.com/prnshtwt) or on github [@pranshuj73](https://github.com/pranshuj73).
+you can find me on [twitter](https://x.com/prnshtwt) or on [github](https://github.com/pranshuj73).
 
 this is my collection of notes ive been taking about things ive been learning & exploring.
 
