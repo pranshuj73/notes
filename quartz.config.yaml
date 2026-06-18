@@ -88,6 +88,7 @@ plugins:
     layout:
       position: left
       priority: 8
+      condition: not-index
   - source: github:quartz-community/crawl-links
     enabled: true
     options:
