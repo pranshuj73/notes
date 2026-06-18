@@ -65,6 +65,15 @@ body[data-slug^="index-"] .center > hr {
   display: none;
 }
 
+// normalise headings on index pages
+body[data-slug="index"] .center :is(h1, h2, h3, h4, h5, h6):not(.article-title),
+body[data-slug^="index-"] .center :is(h1, h2, h3, h4, h5, h6):not(.article-title) {
+  font-size: 1.25rem;
+}
+
+.backlinks :is(h1, h2, h3, h4, h5, h6) {
+  font-size: 1.25rem;
+}
 
 // mobile: keep everything inline, shrink title, push search to the right
 @media all and #{$mobile} {

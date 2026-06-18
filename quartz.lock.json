@@ -7,8 +7,8 @@
         "name": "Backlinks"
       },
       "resolved": "https://github.com/pranshuj73/quartz-minimal-notes.git",
-      "commit": "494061971f2e74b61d8dd0840caf9ec0ff556012",
-      "installedAt": "2026-06-17T03:16:11.575Z"
+      "commit": "eabaf62077c3741d1b4bd043fbe57bb88e0dad7b",
+      "installedAt": "2026-06-18T02:14:15.577Z"
     },
     "BacklinksBody": {
       "source": {
@@ -16,8 +16,8 @@
         "name": "BacklinksBody"
       },
       "resolved": "https://github.com/pranshuj73/quartz-minimal-notes.git",
-      "commit": "494061971f2e74b61d8dd0840caf9ec0ff556012",
-      "installedAt": "2026-06-17T03:16:11.604Z"
+      "commit": "eabaf62077c3741d1b4bd043fbe57bb88e0dad7b",
+      "installedAt": "2026-06-18T02:14:15.523Z"
     },
     "MobileToc": {
       "source": {
@@ -25,8 +25,8 @@
         "name": "MobileToc"
       },
       "resolved": "https://github.com/pranshuj73/quartz-minimal-notes.git",
-      "commit": "494061971f2e74b61d8dd0840caf9ec0ff556012",
-      "installedAt": "2026-06-17T03:16:07.862Z"
+      "commit": "eabaf62077c3741d1b4bd043fbe57bb88e0dad7b",
+      "installedAt": "2026-06-18T02:14:15.558Z"
     },
     "alias-redirects": {
       "source": "github:quartz-community/alias-redirects",
