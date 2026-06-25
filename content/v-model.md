@@ -1,5 +1,5 @@
 ---
-index: index-swe
+index: "[[index-swe]]"
 title:
 ---
 # v-model
